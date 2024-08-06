@@ -685,6 +685,7 @@ footer .footer_contents .footer_text_section .footer_text {
     #join_us .wrap_section {
         padding: 64px 0px;
     }
+
     /* //함께 하실 분들을 구합니다 */
 }
 
@@ -750,12 +751,6 @@ footer .footer_contents .footer_text_section .footer_text {
 
     /* //이달의 추천 먹거리 */
 
-    /* 함께 하실 분들을 구합니다 */
-    #join_us .join_us_contents figure {
-        width: 480px;
-    }
-
-    /* //함께 하실 분들을 구합니다 */
 }
 
 /* //Tablet Size */
@@ -786,15 +781,14 @@ footer .footer_contents .footer_text_section .footer_text {
 
     #foods .foods_list .f,
     #foods .foods_list .more {
-        width: 200px;
-        height: 200px;
+        width: 24%;
     }
 
     #foods .foods_list {
         display: flex;
         justify-content: space-around;
         margin-bottom: 84px;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
 
@@ -813,12 +807,10 @@ footer .footer_contents .footer_text_section .footer_text {
         background-size: cover;
     }
 
-    #join_us .founding {
+    #join_us .founding,
+    #join_us .recruit {
         margin-bottom: 64px;
-    }
-
-    #join_us .join_us_contents figure {
-        width: 420px;
+        width: 400px;
     }
 
     #join_us .join_us_contents .join_us_text {
@@ -847,10 +839,15 @@ footer .footer_contents .footer_text_section .footer_text {
         font-size: 56px;
     }
 
+    #foods .foods_list {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
     #foods .foods_list .f,
     #foods .foods_list .more {
-        width: 420px;
-        height: 420px;
+        width: 40%;
+        height: 320px;
     }
 
     #foods .foods_list .f {
@@ -861,11 +858,18 @@ footer .footer_contents .footer_text_section .footer_text {
         display: flex;
         justify-content: space-evenly;
         flex-direction: column;
+        align-items: center;
     }
 
     #join_us .join_us_contents figure {
         width: 480px;
         margin: auto;
+    }
+
+    #join_us .founding,
+    #join_us .recruit {
+        margin-bottom: 64px;
+        width: fit-content;
     }
 
     #join_us .join_us_contents .button_section button {
@@ -900,8 +904,8 @@ footer .footer_contents .footer_text_section .footer_text {
 /* Mobile Size */
 @media screen and (max-width:400px) {
     #join_us .join_us_contents figure {
-        width: 360px;
-        height: 280px;
+        width: 100%;
+        height: 240px;
     }
 
     #our_brand .boardgames_text {
@@ -933,10 +937,36 @@ footer .footer_contents .footer_text_section .footer_text {
         left: -5%;
     }
 
+    #join_us .join_us_contents .button_section button {
+        width: 120px;
+        height: 50px;
+        font-size: var(--contents2);
+    }
+
     #foods .foods_list .f,
     #foods .foods_list .more {
         width: 100%;
         height: 320px;
+    }
+
+    #boardgames .more .more_text {
+        font-size: var(--subtitle);
+    }
+
+    #join_us .join_us_contents .join_us_title {
+        font-size: var(--subtitle);
+    }
+
+    #join_us .recruit>figure {
+        background-image: url(../image/recruit_m.jpg);
+    }
+
+    #join_us .founding>figure {
+        background-image: url(../image/founding_m.jpg);
+    }
+
+    #foods .foods_list .more .more_text {
+        font-size: var(--subtitle);
     }
 
     footer .footer_contents {
@@ -946,13 +976,54 @@ footer .footer_contents .footer_text_section .footer_text {
     footer .footer_contents .footer_text_section {
         width: 220px;
     }
+
+    footer .footer_contents .footer_text_section .footer_text {
+        font-size: var(--contents1);
+    }
 }
+
 /* //Mobile Size */
 
 /* Small Mobile Size */
 @media screen and (max-width:320px) {
-    
+    .section_title {
+        font-size: var(--subtitle);
+    }
+
+
+    .text_orange {
+        top: 15%;
+        font-size: 64px;
+    }
+
+    .text_boardgame {
+        bottom: 15%;
+        font-size: 48px;
+    }
+
+    #join_us .join_us_contents figure {
+        width: 90%;
+        height: 200px;
+    }
+
+
+    #foods .foods_list .more .more_text {
+        font-size: var(--subtitle);
+    }
+
+    footer .footer_contents .footer_text_section {
+        height: 100%;
+        display: block;
+        position: absolute;
+        left: 80px;
+        top: 30%;
+    }
+
+    footer .footer_contents {
+        width: fit-content;
+    }
 }
+
 /* //Small Mobile Size */
 
 /* //반응형 */
